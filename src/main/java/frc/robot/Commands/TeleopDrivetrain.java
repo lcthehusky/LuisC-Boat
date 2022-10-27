@@ -15,6 +15,7 @@ public class TeleopDrivetrain extends CommandBase {
 
     @Override
     public void execute() {
-        drivetrain.tankdrive(left, right);
+        // These are our joystick inputs
+        drivetrain.tankdrive(xboxcntrl.getLeftY(), xboxcntrl.getRightY());
     }
 }

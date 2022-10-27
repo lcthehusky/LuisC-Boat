@@ -21,10 +21,10 @@ public class DriveTrain extends SubsystemBase {
     public DriveTrain() {
         MotorControllerGroup LeftGroup = new MotorControllerGroup(FrontLeftMtr, BackLeftMtr);
         MotorControllerGroup RightGroup = new MotorControllerGroup(FrontRightMtr, BackRightMtr);
-        DifferentialDrive Differential1 = new DifferentialDrive(LeftGroup, RightGroup);
+        DifferentialDrive Diff1 = new DifferentialDrive(LeftGroup, RightGroup);
     }
 
     public void TankDrive(dobule left, double right) {
-        Differential1.TankDrive(left, right);
+        Diff1.TankDrive(left, right);
     }
 }

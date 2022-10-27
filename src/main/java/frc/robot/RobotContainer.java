@@ -16,13 +16,14 @@ import frc.robot.Subsystems.DriveTrain;
  */
 public class RobotContainer {
     /* Controllers */
-
+    private XboxController driver = new XboxController(Constants.driverID);
+    private XboxController operator = new XboxController(Constants.driverID);
 
 
     // Initialize AutoChooser Sendable
     private final SendableChooser<Command> autoChooser = new SendableChooser<>();
 
-    DriveTrain drivetrain = new Drivetrain();
+    DriveTrain drivetrain = new DriveTrain();
 
     // Field Relative and openLoop Variables
     boolean fieldRelative;
